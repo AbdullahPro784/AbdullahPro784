@@ -1,0 +1,42 @@
+//Print Inverted triangles with stars: 
+
+//********************
+//*********  *********
+//********    ********
+//*******      *******
+//******        ******
+//*****          *****
+//****            ****
+//***              ***
+//**                **
+//*                  *
+
+
+#include <iostream>
+using namespace std;
+int main() {
+   	int i, j, r;
+	cout << "Enter number of rows : ";
+	cin >> r;
+	for (i = 1; i <= r; i++)
+	{
+		for (j = r; j >= i; j--)
+		{
+			cout << "*";
+		}
+		for (j = 2; j <= i; j++)
+		{
+			cout << " ";
+		}
+		for (j = 2; j <= i; j++)
+		{
+			cout << " ";
+		}
+		for (j = r; j >= i; j--)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+    return 0;
+}
