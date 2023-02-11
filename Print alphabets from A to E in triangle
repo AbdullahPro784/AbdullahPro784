@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+   
+  //for printing 65 69
+    //A
+    //BB
+    //CCC
+    //DDDD
+    //EEEEE
+  
+    for (int i = 65; i <= 69; i++)
+    {
+	    for (int j = 65; j <= i; j++)
+		{
+			cout << char(i);
+	    }
+	   cout << endl;
+    }
+    
+    
+    	return 0;
+}
