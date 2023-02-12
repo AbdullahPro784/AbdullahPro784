@@ -1,0 +1,277 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+//To display menu items and add them to purchase:(login id's are 431 or 532)
+int main()
+{
+
+	int employeeid, trnasactions, total,menu,exit=0,login,transactions2=0,transactions1=0,items[2],list[2],history[2],sum=0;
+	string name[10];
+
+	do
+	{
+		cout << "Enter your login id: ";
+		cin >> employeeid;
+
+		if (employeeid == 431 || employeeid == 532)
+		{
+
+
+			switch (employeeid)
+			{
+			case 431:
+				employeeid = 0;
+				break;
+
+			case 532:
+				employeeid = 1;
+				break;
+			}
+
+			if (employeeid == 0)
+			{
+				cout << "Press 1 for displaying menu: \nPress 2 for exiting: \nPress 3 for logging out: \nPress 4 for displaying previous transactions:\n";
+				cin >> menu;
+
+				if (menu == 1)
+				{
+					cout << "					\\\\\\\\\\\\\\\\\\\\\\\\UCP Cafe/////////////////////		" << endl << endl;
+					cout << "		    Serial No.				       Item name			      Price" << endl << endl;
+					cout << "			1			|		  Tea				|	30" << endl;
+					cout << "			2			|		Small Pizza			|	40" << endl;
+					cout << "			3			|		 Patties			|	40" << endl;
+					cout << "			4			|		  Pastry			|	40" << endl;
+					cout << "			5			|		  Samosa			|	10" << endl;
+					cout << "			6			|	       Green Salad		        |	30" << endl;
+					cout << "			7			|		 Sandwich			|	70" << endl;
+					cout << "			8			|		  Burger			|	100" << endl;
+					cout << "			9			|		  Fries				|	100" << endl;
+					cout << "			10			|		  Coffee			|	50" << endl;
+
+					for (int i = 1; i <= 2; i++)
+					{
+						cout << "Enter the items serial no.: \n";
+						cin >> items[i];
+						transactions1++;
+						if (items[i] == 1)
+						{
+							list[i] = 30;
+							sum = sum + list[i];
+							name[i] = "Tea";
+						}
+						else if (items[i] == 2)
+						{
+							list[i] = 40;
+							sum = sum + list[i];
+							name[i] = "Small pizza";
+						}
+						else if (items[i] == 3)
+						{
+							list[i] = 40;
+							sum = sum + list[i];
+							name[i] = "Patties";
+						}
+						else if (items[i] == 4)
+						{
+							list[i] = 40;
+							sum = sum + list[i];
+							name[i] = "Pastry";
+						}
+						else if (items[i] == 5)
+						{
+							list[i] = 10;
+							sum = sum + list[i];
+							name[i] = "Samosa";
+						}
+						else if (items[i] == 6)
+						{
+							list[i] = 30;
+							sum = sum + list[i];
+							name[i] = "Green Salad";
+						}
+						else if (items[i] == 7)
+						{
+							list[i] = 70;
+							sum = sum + list[i];
+							name[i] = "Sandwich";
+						}
+						else if (items[i] == 8)
+						{
+							list[i] = 100;
+							sum = sum + list[i];
+							name[i] = "Burger";
+						}
+						else if (items[i] == 9)
+						{
+							list[i] = 100;
+							sum = sum + list[i];
+							name[i] = "Fries";
+						}
+						else if (items[i] == 10)
+						{
+							list[i] = 50;
+							sum = sum + list[i];
+							name[i] = "coffee";
+						}
+					}
+				}
+
+				if (menu == 2)
+				{
+					exit = 1;
+				}
+
+				if (menu == 3)
+				{
+					cout << "You are loged out! \n";
+					cout << "Do you want to sign in again?\nPress 1 for signing in again:\nPress 0 to quit:\n";
+					cin >> login;
+					if (login == 1)
+					{
+						exit = 0;
+					}
+					else if (login == 0)
+					{
+						exit == 1;
+						break;
+					}
+				}
+				else if (menu == 4)
+				{
+					if (transactions1 == 0)
+					{
+						cout << "You have made no transactions! \n"<<endl;
+					}
+					else
+					{
+						cout << "The total sum of transactions made is: " << transactions1<<endl;
+						cout << "The total amount generated is: " << sum<<endl;
+						cout << endl;
+						for (int i = 0; i <= transactions1; i++)
+						{
+							cout << "Item name "<< name[i]<<endl;
+						}
+					}
+				}
+			}
+			if (employeeid == 1)
+			{
+				cout << "Press 1 for displaying menu: \nPress 2 for exiting: \nPress 3 for logging out: \nPress 4 for displaying previous transactions:";
+				cin >> menu;
+
+				if (menu == 1)
+				{
+					cout << "					\\\\\\\\\\\\\\\\\\\\\\\\UCP Cafe/////////////////////		" << endl << endl;
+					cout << "		    Serial No.				       Item name			      Price" << endl << endl;
+					cout << "			1			|		  Tea				|	30" << endl;
+					cout << "			2			|		Small Pizza			|	40" << endl;
+					cout << "			3			|		 Patties			|	40" << endl;
+					cout << "			4			|		  Pastry			|	40" << endl;
+					cout << "			5			|		  Samosa			|	10" << endl;
+					cout << "			6			|	       Green Salad		        |	30" << endl;
+					cout << "			7			|		 Sandwich			|	70" << endl;
+					cout << "			8			|		  Burger			|	100" << endl;
+					cout << "			9			|		  Fries				|	100" << endl;
+					cout << "			10			|		  Coffee			|	50" << endl;
+
+					for (int i = 1; i <= 2; i++)
+					{
+						cout << "Enter the items serial no.: \n";
+						cin >> items[i];
+						transactions1++;
+						if (items[i] == 1)
+						{
+							list[i] = 30;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 2)
+						{
+							list[i] = 40;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 3)
+						{
+							list[i] = 40;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 4)
+						{
+							list[i] = 40;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 5)
+						{
+							list[i] = 10;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 6)
+						{
+							list[i] = 30;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 7)
+						{
+							list[i] = 70;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 8)
+						{
+							list[i] = 100;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 9)
+						{
+							list[i] = 100;
+							sum = sum + list[i];
+						}
+						else if (items[i] == 10)
+						{
+							list[i] = 50;
+							sum = sum + list[i];
+						}
+					}
+				}
+
+				else if (menu == 2)
+				{
+					exit = 1;
+				}
+
+				else if (menu == 3)
+				{
+					cout << "You are loged out! \n";
+					cout << "Do you want to sign in again?\nPress 1 for signing in again:\nPress 0 to quit:\n";
+					cin >> login;
+					if (login == 1)
+					{
+						exit = 0;
+					}
+					else if (login == 0)
+					{
+						exit == 1;
+						break;
+					}
+				}
+				
+				
+				else if (menu == 4)
+				{  
+					
+					if (transactions2==0)
+					cout << "You have made no transactions!\n";
+
+					
+				}
+			}
+		}
+		else
+		{
+			cout << "Invalid ID entered!\nRe-enter your id:\n";
+		}
+	}
+			while (exit != 1);
+
+			return 0;
+		
+		}
